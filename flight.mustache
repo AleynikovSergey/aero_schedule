@@ -1,0 +1,32 @@
+<div id="flight_info">
+	{{#each flight}}
+		<div id="time_dep" class="flight_step">
+			<div class="name">Время отправления</div>
+			<time>{{{time_departure}}}<time>
+		</div>
+		<div id="time_arrive" class="flight_step">
+			<div class="name">Время прибытия</div>
+			<time>{{{time_arrive}}}</time>
+		</div>
+
+		<div id="info" class="flight_step">
+			<div class="name">Рейс выполняет авиакомпания</div>	
+			<div> {{airline}}.</div>
+		</div>
+
+		<div id="plane" class="flight_step">	
+			<div class="name">Ваш самолет</div>	
+			<div> {{plane}}.</div>
+		</div>
+
+		<div id="arrival" class="flight_step">
+			<div class="name">Вылет из аэропорта — </div>
+			<div>{{airportDepFsCode}}.</div>
+		</div>
+
+		<div id="dep" class="flight_step">
+			<div class="name">Прилет в аэропорт — </div>
+			<div>{{airportArriveFsCode}}.</div>
+		</div>
+	{{/each}}
+	</div>

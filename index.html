@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Aero schedule</title>
+
+	<script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+
+	<style>
+		#flight_list {
+    		border: 2px solid black;
+   			box-shadow: 0px 1px 7px rgba(0,0,0,0.5);
+			margin: 0 50px 50px 50px;
+		}
+
+		#flight_list_head {
+    		border: 2px solid black;
+   			box-shadow: 0px 1px 7px rgba(0,0,0,0.5);
+			margin: 50px 50px 10px 50px;
+		}
+
+		#flight_info {
+			margin: 50px 50px 50px 50px;
+		}
+
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+
+		.flight, .flight_step {
+    		border-bottom: 1px solid;
+			display: flex;			
+    		margin: 10px;
+    		height: 25px;
+			padding: 20px;
+		}
+
+		.flight div, .flight time {
+			margin: 0 auto;
+			width: 200px;
+		}
+
+		.flight_step div, .flight_step time {
+			margin: 0 auto;
+			width: 350px;
+		}
+
+		.flight_step .name {
+			font-weight: bold;
+		}
+
+		time .red {
+			color: #F00
+		}
+
+		time .lt {
+			text-decoration: line-through;
+		}
+
+		.controls {			
+    		margin: 50px 50px 0 50px;
+		}
+
+		.controls a {
+			margin-bottom: 10px;
+		}
+
+		.controls a:hover {
+			color: #ffac02;
+		}
+
+		.flight:hover {
+			border-bottom: 2px solid #ffac02;
+			margin: 10px 15px 10px 5px;
+    		height: 24px;
+		}
+
+		#flight_list_head .flight:hover {
+			border-bottom: 0;
+    		height: 25px;
+		}
+
+		#flight_list_head .flight {	
+			border-bottom: 0;	
+			display: flex;			
+    		margin: 10px;
+    		height: 25px;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>	
+
+	<div class="controls">	
+		<a href="departure" id="a_departure">Прибытие</a> <>
+		<a href="arrival" id="a_arrival">Отправление</a> <br />
+		<a href="hold" id="a_hold">Задержанные</a> <br />
+		<a href="today_yesterday" id="a_today_yes">Завтра</a> <br />
+		<input type="text" id="search_text"/>
+		<a href="search">Поиск</a> <br />
+	</div>
+
+	<div id="flight_list_head">
+		<div class="flight">
+			<time>Время</time>
+			<div cass="name">Номер рейса</div>
+			<div cass="airline">Перевозчик</div>
+			<div cass="number">Пункт прибытия/отправления</div>
+			<div cass="terminal">Терминал</div>
+			<div cass="status">Статус</div>
+		</div>
+	</div>
+
+	<div id="content">
+		
+	</div>
+	
+	<script src="javascript/can.js"></script>	
+	<script src="javascript/crossroads/lib/signals.js"></script>
+	<script src="javascript/crossroads/crossroads.js"></script>
+	<script src="javascript/crossroads/route.js"></script>
+	<script src="javascript/crossroads/intro.js"></script>
+	<script src="javascript/crossroads/wrapper.js"></script>
+	<script src="javascript/crossroads/pattern_lexer.js"></script>
+	<script src="javascript/data/data.json"></script>
+	<script src="javascript/main.js"></script>
+	<script src="javascript/data/parseData.js"></script>
+	<script src="javascript/control/flight.js"></script>
+	<script src="javascript/routes/routes.js"></script>
+</body>
+</html>

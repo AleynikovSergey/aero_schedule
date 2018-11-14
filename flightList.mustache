@@ -1,0 +1,12 @@
+<div id="flight_list">
+	{{#each flights}}
+	<div id="{{flightNumber}}" class="flight">
+		<time>{{{time}}}</time>
+		<div cass="number">{{flightNumber}}</div>
+		<div cass="airline">{{airline}}</div>
+		<div cass="name">{{airportFsCode}}</div>
+		<div cass="terminal">{{terminal}}</div>
+		<div cass="status">{{status}}</div>
+	</div>
+	{{/each}}
+</div>
