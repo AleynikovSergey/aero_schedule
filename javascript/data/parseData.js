@@ -1,10 +1,10 @@
 
-var depart1 = JSON.parse(dep1);
+var depart1 = JSON.parse(dep1); //считыванние данных
 var depart2 = JSON.parse(dep2);
 var arrive1 = JSON.parse(arr1);
 var arrive2 = JSON.parse(arr2);
 
-function getDepart(isToday, isHold) {
+function getDepart(isToday, isHold) { //получение улетающих рейсов
 	var copyData = isToday ? depart1 : depart2;
 	var dataToOut = [];
 
@@ -70,7 +70,7 @@ function getDepart(isToday, isHold) {
 	return dataToOut;
 }
 
-function getArrive(isToday, isHold) {
+function getArrive(isToday, isHold) { //получение прибывающих рейсов
 	var copyData = isToday ? arrive1 : arrive2;
 	var dataToOut = [];
 
@@ -134,7 +134,7 @@ function getArrive(isToday, isHold) {
 	return dataToOut;
 }
 
-function getFlight(id) {
+function getFlight(id) { //получение полета по id
 	var copyData;
 	var dataToOut = [];
 	if (state_isArrive && state_isToday)

@@ -1,13 +1,13 @@
 (function () {
-	var routes = {
-		flightsListDeparture: '/departure',
+	var routes = { //список route
+		flightsListDeparture: '/departure', 
 		flightsListArrival: '/arrival',
 		hold: '/hold',
 		today_yesterday: '/today_yesterday',
 		search: '/search'
 	}
 
-	var actions = {
+	var actions = { //действия на каждый route
 		flightsListDeparture: function() {
 			state_isArrive = false;
 			state_isToday = true;
@@ -56,7 +56,7 @@
 		App.route[name].matched.add(actions[name]);
 	}
 
-	$(document).on('click', 'a', function(e) {
+	$(document).on('click', 'a', function(e) { 
 		e.preventDefault();
 
 		var url = $(e.currentTarget).attr('href');
@@ -67,7 +67,7 @@
 
 })();
 
-function colorLinks() {
+function colorLinks() { //для окраски ссылок
 	if (!state_isToday)
 		$('#a_today_yes').css('color', '#ffac02');
 	else
