@@ -3,7 +3,9 @@ Aero schedule
 
 Используемые библиотеки:
   -canjs — рендер страницы
+  
   -crossroads — для работы с routes
+  
   -jquery
 
 Данные использовались с сервиса "http://developer.flightstats.com/".
