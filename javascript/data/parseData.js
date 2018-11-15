@@ -1,8 +1,8 @@
 
-var depart1 = JSON.parse(dep1); //считыванние данных
-var depart2 = JSON.parse(dep2);
-var arrive1 = JSON.parse(arr1);
-var arrive2 = JSON.parse(arr2);
+var arrive1 = JSON.parse(dep1); //считыванние данных
+var arrive2 = JSON.parse(dep2);
+var depart1 = JSON.parse(arr1);
+var depart2 = JSON.parse(arr2);
 
 function getDepart(isToday, isHold) { //получение улетающих рейсов
 	var copyData = isToday ? depart1 : depart2;
